@@ -155,6 +155,7 @@ export default {
         trapFocus: true,
       });
     },
+    flogin() {},
   },
 };
 </script>
