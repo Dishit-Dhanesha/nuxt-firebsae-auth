@@ -38,6 +38,35 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/buefy
     'nuxt-buefy',
+    [
+      '@nuxtjs/firebase',
+      {
+        config: {
+          apiKey: process.env.APIKEY,
+          authDomain: process.env.AUTH_DOMAIN,
+          projectId: process.env.PROJECT_ID,
+          storageBucket: process.env.STORAGE_BUCKET,
+          messagingSenderId: process.env.MESSAGING_SENDER_ID,
+          appId: process.env.APPI,
+          measurementId: process.env.MEASUREMENT_ID,
+        },
+        services: {
+          auth: {
+            persistence: 'local', // default
+            initialize: {
+              onAuthStateChangedAction: 'onAuthStateChangedAction',
+              subscribeManually: false,
+            },
+            ssr: false, // default
+          },
+          // firebase: true,
+          firestore: {
+            memoryOnly: false,
+            enablePersistence: true,
+          },
+        },
+      },
+    ],
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

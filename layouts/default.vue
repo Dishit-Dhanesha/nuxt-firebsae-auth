@@ -124,7 +124,9 @@ const SignInModalForm = {
                             @click="$emit('close')" />
                         <b-button
                             label="Login"
-                            type="is-primary" />
+                            type="is-primary"
+                            @click="flogin"
+                             />
                     </footer>
                 </div>
             </form>
