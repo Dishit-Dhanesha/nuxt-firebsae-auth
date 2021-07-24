@@ -1,53 +1,29 @@
 <template>
   <section class="section">
-    <div class="columns is-mobile">
-      <card
-        title="Free"
-        icon="github"
-      >
-        Open source on <a href="https://github.com/buefy/buefy">
-          GitHub
-        </a>
-      </card>
-
-      <card
-        title="Responsive"
-        icon="cellphone-link"
-      >
-        <b class="has-text-grey">
-          Every
-        </b> component is responsive
-      </card>
-
-      <card
-        title="Modern"
-        icon="alert-decagram"
-      >
-        Built with <a href="https://vuejs.org/">
-          Vue.js
-        </a> and <a href="http://bulma.io/">
-          Bulma
-        </a>
-      </card>
-
-      <card
-        title="Lightweight"
-        icon="arrange-bring-to-front"
-      >
-        No other internal dependency
-      </card>
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-half">
+          <div class="box">
+            <h2 class="is-size-3">This is Home Page</h2>
+          </div>
+          <div class="box">
+            <h2 class="is-size-3">This page is accessible to everyone</h2>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 </template>
 
 <script>
-import Card from '~/components/Card'
-
 export default {
-  name: 'HomePage',
-
-  components: {
-    Card
-  }
-}
+  name: "HomePage",
+};
 </script>
+
+<style>
+.align-center {
+  display: flex;
+  align: center;
+}
+</style>
