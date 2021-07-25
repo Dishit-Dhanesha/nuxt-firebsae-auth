@@ -1,29 +1,25 @@
 <template>
-  <section class="section">
-    <div class="container">
-      <div class="columns is-centered">
-        <div class="column is-half">
-          <div class="box">
-            <h2 class="is-size-3">This is Home Page</h2>
-          </div>
-          <div class="box">
-            <h2 class="is-size-3">This page is accessible to everyone</h2>
-          </div>
-        </div>
-      </div>
+  <div class="container has-text-centered">
+    This is Main page
+   
+      <br />
     </div>
-  </section>
+  </div>
 </template>
 
 <script>
+import { mapState, mapActions, mapGetters, mapMutations } from 'vuex';
 export default {
-  name: "HomePage",
+  data() {
+    return {
+      name: '',
+    };
+  },
+  computed: {
+    ...mapState(['allCrypto']),
+  },
+  methods: {
+    ...mapActions(['getAllCrypto']),
+  },
 };
 </script>
-
-<style>
-.align-center {
-  display: flex;
-  align: center;
-}
-</style>
